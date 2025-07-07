@@ -1,8 +1,11 @@
 import Link from "next/link";
 
-type Params = Promise<{ rcdId: string }>
+type Params = Promise<{ id: string }>
 
-export default function Post(props: {params: Params}) {
+export default async function Post(props: {params: Params}) {
+  const params = await props.params;
+  const id = params.id;
+
   return (
     <div>
       <h3>Post #{id}</h3>
