@@ -1,12 +1,8 @@
 import Link from "next/link";
 
-type PostProps = {
-  params: {
-    id: number;
-  };
-};
+type Params = Promise<{ rcdId: string }>
 
-export default function Post({ params: { id } }: PostProps) {
+export default function Post(props: {params: Params}) {
   return (
     <div>
       <h3>Post #{id}</h3>
