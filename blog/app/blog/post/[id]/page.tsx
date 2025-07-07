@@ -1,6 +1,12 @@
 import Link from "next/link";
 
-export default function Post({ params: { id } }) {
+type PostProps = {
+  params: {
+    id: number;
+  };
+};
+
+export default function Post({ params: { id } }: PostProps) {
   return (
     <div>
       <h3>Post #{id}</h3>
